@@ -142,7 +142,66 @@ https://blog.csdn.net/qq_30336433/article/details/83268945
 
 ## 方法区
 
+供各线程共享的运行时内存区域。它***存储了每一个类的结构信息***，例如运行时常量池（Runtime Constant Pool）、字段和方法数据、构造函数和普通方法的**字节码内容**。
+
+上面讲的是规范，在不同虚拟机里头实现是不一样的，最典型的就是***永久代(PermGen space)和元空间(Metaspace)。***
+
+> 方法区 f = new 永久代
+>
+> 方法区 f = new 元空间
+
+***但是实例变量存在堆内存中和方法区无关***
+
+## 堆
+
+
+
 ## Java栈 （普通方法）
+
+栈也叫栈内存，主管Java程序的运行，是在线程创建时创建，它的生命期是跟随线程的生命期，线程结束栈内存也就释放，**对于栈来说不存在垃圾回收问题**，只要线程一结束该栈就Over，生命周期和线程一致，是线程私有的。
+
+***8种基本类型的变量+对象的引用变量+实例方法都是在函数的栈内存中分配。***
+
+### 存储内容
+
+栈帧(Java 方法)中主要保存3 类数据：
+
++ 本地变量（Local Variables）:输入参数和输出参数以及方法内的变量；
+
++ 栈操作（Operand Stack）:记录出栈、入栈的操作；
+
++ 栈帧数据（Frame Data）:包括类文件、方法等等。
+
+每个方法执行的同时都会创建一个栈帧，用于存储局部变量表、操作数栈、动态链接、方法出口等信息，每一个方法从调用直至执行完毕的过程，就对应着一个栈帧在虚拟机中入栈到出栈的过程。栈的大小和具体JVM的实现有关，通常在256K~756K之间,与等于1Mb左右。
+
+```java
+package com.ntuzy.juc_01;
+
+/**
+ * @Author IamZY
+ * @create 2019/12/29 11:27
+ */
+public class JVMNote {
+
+    // java.lang.StackOverflowError  -> 不是异常是错误
+    public static void m1 () {
+        m1();
+    }
+
+    public static void main(String[] args){
+        m1();
+    }
+
+}
+```
+
+![image-20191229113450026](https://github.com/IamZY/JVM/blob/master/images/image-20191229113450026.png)
+
+HotSpot是使用指针的方式来访问对象：
+
+Java堆中会存放访问**类元数据**的地址，
+
+reference存储的就直接是对象的地址
 
 ## 本地方法栈 （Native Method Stack）
 

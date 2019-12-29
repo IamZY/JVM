@@ -60,11 +60,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyObject.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/MyObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="504">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JVMNote.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/JVMNote.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#137#138#0" expanded="true" />
+                <element signature="e#157#158#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +87,8 @@
       <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Thread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15432">
-              <caret line="698" column="23" selection-start-line="698" selection-start-column="11" selection-end-line="698" selection-end-column="23" />
+            <state relative-caret-position="-552">
+              <caret line="1741" column="16" selection-start-line="1741" selection-start-column="16" selection-end-line="1741" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -107,6 +122,7 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/ConditionDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/CallableDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/MyObject.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/JVMNote.java" />
       </list>
     </option>
   </component>
@@ -119,7 +135,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="112" />
     <option name="y" value="109" />
     <option name="width" value="2204" />
@@ -178,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MyObject">
+  <component name="RunManager" selected="Application.JVMNote">
     <configuration name="CallableDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ntuzy.juc_01.CallableDemo" />
       <module name="JVM" />
@@ -201,8 +217,8 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Lock8Demo05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.juc_01.Lock8Demo05" />
+    <configuration name="JVMNote" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.juc_01.JVMNote" />
       <module name="JVM" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -276,19 +292,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Lock8Demo05" />
       <item itemvalue="Application.ProdConsumerDemo04" />
       <item itemvalue="Application.ConditionDemo" />
       <item itemvalue="Application.CallableDemo" />
       <item itemvalue="Application.MyObject" />
+      <item itemvalue="Application.JVMNote" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JVMNote" />
         <item itemvalue="Application.MyObject" />
         <item itemvalue="Application.CallableDemo" />
         <item itemvalue="Application.ConditionDemo" />
         <item itemvalue="Application.ProdConsumerDemo04" />
-        <item itemvalue="Application.Lock8Demo05" />
       </list>
     </recent_temporary>
   </component>
@@ -306,18 +322,20 @@
       <workItem from="1577415757437" duration="146000" />
       <workItem from="1577415920257" duration="11929000" />
       <workItem from="1577514859077" duration="8118000" />
-      <workItem from="1577583992723" duration="1609000" />
+      <workItem from="1577583992723" duration="4020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24634000" />
+    <option name="totallyTimeSpent" value="27045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32976282" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -325,7 +343,7 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32440704" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32440704" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -343,7 +361,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32976282" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,6 +632,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="922">
           <caret line="386" lean-forward="true" selection-start-line="386" selection-end-line="386" />
+          <folding>
+            <element signature="e#19327#19328#0" expanded="true" />
+            <element signature="e#19410#19411#0" expanded="true" />
+            <element signature="e#24329#24330#0" expanded="true" />
+            <element signature="e#24394#24395#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -727,15 +750,28 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15432">
-          <caret line="698" column="23" selection-start-line="698" selection-start-column="11" selection-end-line="698" selection-end-column="23" />
+        <state relative-caret-position="-552">
+          <caret line="1741" column="16" selection-start-line="1741" selection-start-column="16" selection-end-line="1741" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/MyObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="504">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/JVMNote.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
