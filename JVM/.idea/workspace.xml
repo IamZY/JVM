@@ -69,16 +69,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JVMNote.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JVMNote.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/JVMNote.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="384">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#137#138#0" expanded="true" />
                 <element signature="e#157#158#0" expanded="true" />
                 <element signature="e#199#200#0" expanded="true" />
                 <element signature="e#219#220#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestTransferValue.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/TestTransferValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+              <folding>
+                <element signature="e#156#157#0" expanded="true" />
+                <element signature="e#179#180#0" expanded="true" />
+                <element signature="e#223#224#0" expanded="true" />
+                <element signature="e#244#245#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#456#457#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#1152#1153#0" expanded="true" />
+                <element signature="e#1204#1205#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/CallableDemo.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/MyObject.java" />
         <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/JVMNote.java" />
+        <option value="$PROJECT_DIR$/src/com/ntuzy/juc_01/TestTransferValue.java" />
       </list>
     </option>
   </component>
@@ -174,7 +198,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="vector&#9;PSI&#9;JAVA://java.util.Vector&#10;runnable&#9;PSI&#9;JAVA://java.lang.Runnable" />
+    <property name="SearchEverywhereHistoryKey" value="getter&#9;ACTION&#9;GenerateGetterAndSetter&#10;vector&#9;PSI&#9;JAVA://java.util.Vector&#10;runnable&#9;PSI&#9;JAVA://java.lang.Runnable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -194,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.JVMNote">
+  <component name="RunManager" selected="Application.TestTransferValue">
     <configuration name="CallableDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ntuzy.juc_01.CallableDemo" />
       <module name="JVM" />
@@ -239,8 +263,8 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="ProdConsumerDemo04" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ntuzy.juc_01.ProdConsumerDemo04" />
+    <configuration name="TestTransferValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntuzy.juc_01.TestTransferValue" />
       <module name="JVM" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -292,19 +316,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.ProdConsumerDemo04" />
       <item itemvalue="Application.ConditionDemo" />
       <item itemvalue="Application.CallableDemo" />
       <item itemvalue="Application.MyObject" />
       <item itemvalue="Application.JVMNote" />
+      <item itemvalue="Application.TestTransferValue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestTransferValue" />
         <item itemvalue="Application.JVMNote" />
         <item itemvalue="Application.MyObject" />
         <item itemvalue="Application.CallableDemo" />
         <item itemvalue="Application.ConditionDemo" />
-        <item itemvalue="Application.ProdConsumerDemo04" />
       </list>
     </recent_temporary>
   </component>
@@ -322,12 +346,12 @@
       <workItem from="1577415757437" duration="146000" />
       <workItem from="1577415920257" duration="11929000" />
       <workItem from="1577514859077" duration="8118000" />
-      <workItem from="1577583992723" duration="4020000" />
+      <workItem from="1577583992723" duration="5635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27045000" />
+    <option name="totallyTimeSpent" value="28660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -764,13 +788,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/JVMNote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="384">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#137#138#0" expanded="true" />
             <element signature="e#157#158#0" expanded="true" />
             <element signature="e#199#200#0" expanded="true" />
             <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ntuzy/juc_01/TestTransferValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+          <folding>
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
           </folding>
         </state>
       </provider>
