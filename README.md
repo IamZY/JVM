@@ -216,6 +216,55 @@ https://blog.csdn.net/qq_30336433/article/details/83268945
 
 ![image-20191229161427996](https://github.com/IamZY/JVM/blob/master/images/image-20191229161427996.png)
 
+在Java8中，永久代已经被移除，被一个称为**元空间**的区域所取代。元空间的本质和永久代类似。
+
++ 元空间与永久代之间最大的区别在于：
+
+  永久代使用的JVM的堆内存，但是java8以后的**元空间并不在虚拟机中而是使用本机物理内存**。
+
+  因此，默认情况下，元空间的大小仅受本地内存限制。类的元数据放入 native memory, 字符串池和类的静态变量放入 java 堆中，这样可以加载多少类的元数据就不再由MaxPermSize 控制, 而由系统的实际可用空间来控制。
+
+![image-20191229161736062](https://github.com/IamZY/JVM/blob/master/images/image-20191229161736062.png)
+
+```java
+public class T2 {
+
+    public static void main(String[] args) {
+        System.out.println(Runtime.getRuntime().availableProcessors());  // 处理器
+
+        long maxMemory = Runtime.getRuntime().maxMemory();//返回 Java 虚拟机试图使用的最大内存量（1/4）。
+        long totalMemory = Runtime.getRuntime().totalMemory();//返回 Java 虚拟机中的内存总量（1/64）。
+        System.out.println("-Xmx:MAX_MEMORY = " + maxMemory + "（字节）、" + (maxMemory / (double) 1024 / 1024) + "MB");  // 堆内存最大
+        System.out.println("-Xms:TOTAL_MEMORY = " + totalMemory + "（字节）、" + (totalMemory / (double) 1024 / 1024) + "MB");  // 堆内存最初大小
+    }
+
+}
+```
+
+> -Xms1024m -Xmx1024m -XX:+PrintGCDetails
+
+![image-20191229163923864](https://github.com/IamZY/JVM/blob/master/images/image-20191229163923864.png)
+
+### 详细GC收集日志
+
+> [GC (Allocation Failure) 
+>
+> [PSYoungGen: 1536K->504K(2048K)] 1536K->728K(7680K), 0.0009730 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+
+![image-20191229165109224](https://github.com/IamZY/JVM/blob/master/images/image-20191229165109224.png)
+
+>[Full GC (Ergonomics)
+>
+>[PSYoungGen: 1446K->0K(2048K)]
+>
+>[ParOldGen: 5054K->3050K(5632K)] 6500K->3050K(7680K),
+>
+>[Metaspace: 3179K->3179K(1056768K)], 0.0040745 secs]
+>
+>[Times: user=0.00 sys=0.00, real=0.00 secs] 
+
+
+
 ## Java栈 （普通方法）
 
 栈也叫栈内存，主管Java程序的运行，是在线程创建时创建，它的生命期是跟随线程的生命期，线程结束栈内存也就释放，**对于栈来说不存在垃圾回收问题**，只要线程一结束该栈就Over，生命周期和线程一致，是线程私有的。
