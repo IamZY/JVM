@@ -18,6 +18,6 @@ public class MyObject {
         Object o = new Object();
         System.out.println(o.getClass().getClassLoader());  // null  jdk自带  bootstrap
         
-        
+//        Thread.State
     }
 }
