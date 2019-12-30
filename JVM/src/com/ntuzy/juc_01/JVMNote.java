@@ -9,17 +9,16 @@ import java.util.Random;
 public class JVMNote {
 
     // java.lang.StackOverflowError
-    public static void m1 () {
+    public static void m1() {
         m1();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        m1();
 
-        String str = "www.baidu.com" ;
-        while(true)
-        {
-            str += str + new Random().nextInt(88888888) + new Random().nextInt(999999999) ;
+        String str = "www.baidu.com";
+        while (true) {
+            str += str + new Random().nextInt(88888888) + new Random().nextInt(999999999);
         }
 
 
