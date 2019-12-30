@@ -388,6 +388,10 @@ public class T {
 
 基于上面的考虑，老年代一般是由标记清除或者是标记清除与标记整理的混合实现。以hotspot中的***CMS(Compact-Mark-Sweep)回收器***为例，CMS是基于Mark-Sweep实现的，对于对像的回收效率很高，而对于碎片问题，CMS采用基于Mark-Compact算法的Serial Old回收器做为补偿措施：当内存回收不佳（碎片导致的Concurrent Mode Failure时），将采用Serial Old执行Full GC以达到对老年代内存的整理。
 
+#### G1 GC
+
+https://zhuanlan.zhihu.com/p/22591838
+
 ## Java栈 （普通方法）
 
 栈也叫栈内存，主管Java程序的运行，是在线程创建时创建，它的生命期是跟随线程的生命期，线程结束栈内存也就释放，**对于栈来说不存在垃圾回收问题**，只要线程一结束该栈就Over，生命周期和线程一致，是线程私有的。
@@ -491,11 +495,57 @@ JMM关于同步规定:
 
 ![image-20191230114624845](https://github.com/IamZY/JVM/blob/master/images/image-20191230114624845.png)
 
-## 可见性
++  可见性
 
-## 原子性
++  原子性
 
-## 有序性
++ 有序性
+
+```java
+package com.ntuzy.juc_01;
+
+/**
+ * JMM 可见性
+ *
+ * @Author IamZY
+ * @create 2019/12/30 14:35
+ */
+public class T3 {
+
+    static class MyNumber {
+        volatile int number = 10;
+
+        public void addTo1205() {
+            this.number = 1205;
+        }
+    }
+
+
+    public static void main(String[] args) {
+        MyNumber number = new MyNumber();
+
+        new Thread(() -> {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            number.addTo1205();  // 将10修改成1205
+            System.out.println(Thread.currentThread().getName() + "\t" + number.number);
+        }, "AAA").start();
+
+        while (number.number == 10) {
+            // 需要有通知机制告诉main线程 跳出while
+//            System.out.println("-----------------------------");
+        }
+
+        System.out.println(Thread.currentThread().getName() + "\t" + number.number);
+
+    }
+
+}
+
+```
 
 
 
